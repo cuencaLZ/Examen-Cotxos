@@ -9,8 +9,12 @@ public class Carrera {
 	private String destino;
 	private String tarjetaCredito;
 	//private  conductor;
-	public Carrera(){
-		origen=null;
+	public Carrera(String tarjetaCredito){
+		this.tarjetaCredito=tarjetaCredito;
+	}
+	
+	public Carrera() {
+		
 	}
 	
 	
