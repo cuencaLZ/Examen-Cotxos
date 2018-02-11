@@ -16,7 +16,7 @@ public class Conductor {
 	};
 	
 	public void setValoracion(byte valoracion) {
-		double suma;
+		double suma = 0;
 		this.valoraciones.add(valoracion);
 		for (double numero:valoraciones) {
 			 suma=suma+numero;
@@ -55,7 +55,6 @@ public class Conductor {
 		this.valoraciones = valoraciones;
 	}
 		
-	}
 	public boolean isOcupado() {
 		return ocupado;
 	}

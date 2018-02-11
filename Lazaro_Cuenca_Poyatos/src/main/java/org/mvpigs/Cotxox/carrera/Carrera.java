@@ -1,5 +1,7 @@
 package org.mvpigs.Cotxox.carrera;
 
+import org.mvpigs.Cotxox.tarifa.Tarifa;
+
 public class Carrera {
 	private double tiempoEsperado;
 	private double tiempoCarrera;
@@ -8,6 +10,7 @@ public class Carrera {
 	private String origen;
 	private String destino;
 	private String tarjetaCredito;
+	private int propina=0;
 	//private  conductor;
 	public Carrera(String tarjetaCredito){
 		this.tarjetaCredito=tarjetaCredito;
@@ -59,5 +62,14 @@ public class Carrera {
 	}
 	public void setTarjetaCredito(String tarjetaCredito) {
 		this.tarjetaCredito = tarjetaCredito;
+	}
+	public double getCosteEsperado() {
+		Tarifa coste = new Tarifa();
+		return coste.getCosteTotalEsperado(this);}
+	public void realizarPago(double pago) {
+		this.costeTotal = pago;
+	}
+	public void recibirPropina(int propina) {
+		this.propina=propina;
 	}
 }

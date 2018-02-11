@@ -7,6 +7,9 @@ public class Tarifa{
 	double costeMinuto=0.35;
 	double costeMinimo=5;
 	double porcentajeComision=0.2;
+	public Tarifa() {
+		
+	};
 
 	public double getCosteDistancia(double distancia){
 		return  (distancia*costeMilla);
